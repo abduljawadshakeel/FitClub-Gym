@@ -1,0 +1,192 @@
+.Reasons {
+  display: flex;
+  padding: 2rem;
+  grid-template: 2rem;
+}
+.left-R {
+  flex: 1 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  grid-auto-rows: 1fr;
+}
+
+.left-R > img {
+  object-fit: cover;
+}
+
+.left-R > :nth-child(1) {
+  width: 12rem;
+  grid-row: 1/3;
+  height: 28rem;
+}
+
+.left-R > :nth-child(2) {
+  width: auto;
+  height: 16rem;
+  grid-column: 2/4;
+}
+
+.left-R > :nth-child(3) {
+  width: 14rem;
+  grid-column: 2/3;
+  grid-row: 2;
+}
+
+.left-R > :nth-child(4) {
+  width: 10rem;
+  grid-column: 3/4;
+  grid-row: 2;
+}
+
+.right-R {
+  flex: 1 1;
+  text-transform: uppercase;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-R > span {
+  font-weight: bold;
+  color: var(--orange);
+}
+
+.right-R > div {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+ {
+  /*
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.features-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1rem;
+  list-style: none;
+}
+.features-list > ul > li > img {
+  width: 2rem;
+  height: 2rem;
+}
+*/
+}
+
+.features-list div {
+  list-style-type: none;
+  gap: 1rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.features-list span {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.features-list img {
+  width: 2rem;
+  height: 2rem;
+}
+.our-partners {
+  display: flex;
+}
+
+.our-partners > span {
+  font-size: 1rem;
+  color: gray;
+  font-weight: lighter;
+}
+.logos-p {
+  display: flex;
+  gap: 1rem;
+}
+
+.logos-p img {
+  width: 2.5rem;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .Reasons {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .left-R {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .left-R > img {
+    width: 100%;
+    height: auto;
+  }
+
+  .left-R > :nth-child(1),
+  .left-R > :nth-child(2),
+  .left-R > :nth-child(3),
+  .left-R > :nth-child(4) {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .right-R {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .right-R > div {
+    font-size: 2rem;
+  }
+
+  .features-list {
+    padding: 1rem;
+  }
+
+  .features-list div {
+    gap: 0.5rem;
+  }
+
+  .features-list span {
+    font-size: 1rem;
+  }
+
+  .features-list img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .our-partners {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .our-partners > span {
+    font-size: 0.9rem;
+  }
+
+  .logos-p {
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .logos-p img {
+    width: 2rem;
+  }
+}

@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color:none; 
+
+.logo {
+  width: 10rem;
+  height: 3rem;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  color: white;
+}
+
+.header-menu li:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header-menu.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Adjust based on header height */
+  right: 20px; /* Adjust to align properly */
+  background: #333;
+  padding: 1rem;
+}
+
+.header-menu.open li {
+  margin-bottom: 1rem;
+}
+
+/* Media Query for responsive design */
+@media screen and (max-width: 768px) {
+  .header-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+}
